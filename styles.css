@@ -13,17 +13,30 @@ header {
 nav {
     margin: 20px 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
+
+.wrapper{
+    display:flex;
+}
+
 nav a {
     margin: 0 15px;
     text-decoration: none;
     color: #333;
+    padding: 10px;
 }
 .container {
+    margin-left: 20px; /* Ajusta esto para hacer espacio para el menú lateral */
     padding: 20px;
-    max-width: 800px;
-    margin: auto;
+    max-width: calc(100% - 220px); /* Ajusta el ancho disponible */
     background-color: white;
+    border: 2px solid #ddd; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    flex: 1; /* Permite que el contenedor ocupe el espacio restante */
+    box-sizing: border-box; /* Incluye el padding y border en el width */
 }
 footer {
     background-color: #333;
