@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Define the images
+document.addEventListener("DOMContentLoaded", function() {
     const images = [
         { src: 'images/PerroReal.jpeg', isReal: true },
         { src: 'images/Perro1.jpg', isReal: false },
@@ -7,13 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
         { src: 'images/Perro3.jpg', isReal: false }
     ];
 
-    // Shuffle the images array
+    // Desordenar las imágenes
     images.sort(() => Math.random() - 0.5);
 
-    // Get the game area
+    // Obtener el área del juego
     const gameArea = document.getElementById('game-area');
 
-    // Create image elements and append to game area
+    // Crear elementos de imagen y agregarlos al área del juego
     images.forEach(image => {
         const imgElement = document.createElement('img');
         imgElement.src = image.src;

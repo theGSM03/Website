@@ -80,3 +80,19 @@ button {
 button:hover {
     background-color: #555;
 }
+
+/* Añadir estas clases al final del archivo styles.css */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1px;
+}
+
+.grid-container img {
+    width: 50%;
+    height: auto;
+    border: 2px solid #ddd; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
