@@ -1,35 +1,30 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const gameArea = document.getElementById("game-area");
-    
-    // Ejemplo de imágenes (puedes sustituirlas por tus propias imágenes)
+document.addEventListener("DOMContentLoaded", function () {
+    // Define the images
     const images = [
-        { src: "real_image.jpg", real: true },
-        { src: "fake_image1.jpg", real: false },
-        { src: "fake_image2.jpg", real: false },
-        { src: "fake_image3.jpg", real: false }
+        { src: 'images/PerroReal.jpeg', isReal: true },
+        { src: 'images/Perro1.jpg', isReal: false },
+        { src: 'images/Perro2.jpg', isReal: false },
+        { src: 'images/Perro3.jpg', isReal: false }
     ];
 
-    // Desordenar las imágenes
+    // Shuffle the images array
     images.sort(() => Math.random() - 0.5);
 
-    // Crear elementos img y agregarlos al game-area
-    images.forEach((image, index) => {
-        const imgElement = document.createElement("img");
-        imgElement.src = image.src;
-        imgElement.dataset.real = image.real;
-        imgElement.style.width = "200px"; // Ajusta el tamaño de las imágenes según tu preferencia
-        imgElement.style.margin = "10px";
-        imgElement.style.cursor = "pointer";
+    // Get the game area
+    const gameArea = document.getElementById('game-area');
 
-        imgElement.addEventListener("click", function() {
-            if (image.real) {
-                alert("¡Correcto! Has encontrado la imagen real.");
-                // Aquí puedes agregar lógica para avanzar al siguiente nivel
+    // Create image elements and append to game area
+    images.forEach(image => {
+        const imgElement = document.createElement('img');
+        imgElement.src = image.src;
+        imgElement.classList.add('game-image');
+        imgElement.addEventListener('click', function () {
+            if (image.isReal) {
+                alert('¡Correcto! Esta es la imagen real.');
             } else {
-                alert("Incorrecto, inténtalo de nuevo.");
+                alert('Incorrecto. Esta es una imagen generada por IA.');
             }
         });
-
         gameArea.appendChild(imgElement);
     });
 });
