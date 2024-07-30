@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Ejemplo de imágenes (puedes sustituirlas por tus propias imágenes)
     const images = [
-        { src: "real_image.jpg", real: true },
-        { src: "fake_image1.jpg", real: false },
-        { src: "fake_image2.jpg", real: false },
-        { src: "fake_image3.jpg", real: false }
+        { src: "PerroReal.jpeg", real: true },
+        { src: "Perro1.jpg", real: false },
+        { src: "Perro2.jpg", real: false },
+        { src: "Perro3.jpg", real: false }
     ];
 
     // Desordenar las imágenes
